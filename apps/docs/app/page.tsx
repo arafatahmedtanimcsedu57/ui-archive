@@ -131,6 +131,26 @@ export default function Page() {
             </Button>
           </div>
         </div>
+
+        <div id="states-buttons">
+          <div className="mb-3">
+            <h2 className="text-medium font-semibold leading-9">
+              Stateful Buttons{" "}
+            </h2>
+            <hr />
+            <p className="leading-9 text-sm">
+              Buttons may have loading or disable state.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 items-center">
+            <Button disabled>Disabled</Button>
+
+            <Button disabled>
+              <Icons.Loader2 className="animate-spin" size={16} />
+              Please wait
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

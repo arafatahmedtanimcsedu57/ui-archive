@@ -180,3 +180,35 @@ Buttons can also include complex layouts with dividers.
   <Icons.ArrowBigRight size={16} />
 </Button>
 ```
+
+## Stateful Buttons
+
+Buttons may have loading or disable state.
+
+<Canvas>
+  <Story name="Stateful Buttons">
+    <div className="flex flex-wrap gap-5 items-center">
+      <Button disabled>
+        Disabled
+      </Button>
+
+      <Button disabled>
+        <Icons.Loader2 className="animate-spin" size={16} />
+        Please wait
+      </Button>
+
+     </div>
+
+  </Story>
+</Canvas>
+
+```jsx
+<Button disabled>
+  Disabled
+</Button>
+
+<Button disabled>
+  <Icons.Loader2 size={16} />
+  Please wait
+</Button>
+```
