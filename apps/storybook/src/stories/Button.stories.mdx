@@ -10,26 +10,18 @@ and support for icons.
 
 ## Default Buttons
 
-Basic button styles include `Primary`, `Outline`, and `Ghost`.
+Basic button styles include `Primary`.
 
 <Canvas>
   <Story name="Default Buttons">
     <div className="flex flex-wrap items-center gap-5">
       <Button>Primary Button</Button>
-      <Button variant="outline">Outline Button</Button>
-      <Button variant="ghost">Ghost Button</Button>
-
     </div>
-
   </Story>
 </Canvas>
 
 ```jsx
 <Button>Primary Button</Button>
-
-<Button variant="outline">Outline Button</Button>
-
-<Button variant="ghost">Ghost Button</Button>
 ```
 
 ## Button Sizes
@@ -63,13 +55,22 @@ Additional button variants include Destructive and Link.
     <div className="flex flex-wrap items-center gap-5">
       <Button variant="destructive">Destructive</Button>
       <Button variant="link">Link</Button>
+      <Button variant="outline">Outline Button</Button>
+      <Button variant="ghost">Ghost Button</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="destructive-outline">Destructive Outline</Button>
     </div>
+
   </Story>
 </Canvas>
 
 ```jsx
 <Button variant="destructive">Destructive</Button>
 <Button variant="link">Link</Button>
+<Button variant="outline">Outline Button</Button>
+<Button variant="ghost">Ghost Button</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="destructive-outline">Destructive Outline</Button>
 ```
 
 ## Buttons with Icons
@@ -96,7 +97,6 @@ Buttons can be enhanced with icons from the Icons library.
       <Button variant="outline">
         <Icons.Moon size={16} />
       </Button>
-
     </div>
 
   </Story>
