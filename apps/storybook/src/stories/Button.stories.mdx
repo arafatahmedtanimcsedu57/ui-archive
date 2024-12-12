@@ -1,0 +1,182 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Button, Icons } from "ui";
+
+<Meta title="Example/Button" component={Button} />
+
+# Button Component
+
+The `Button` component is a versatile UI element with various styles, sizes,
+and support for icons.
+
+## Default Buttons
+
+Basic button styles include `Primary`, `Outline`, and `Ghost`.
+
+<Canvas>
+  <Story name="Default Buttons">
+    <div className="flex flex-wrap items-center gap-5">
+      <Button>Primary Button</Button>
+      <Button variant="outline">Outline Button</Button>
+      <Button variant="ghost">Ghost Button</Button>
+
+    </div>
+
+  </Story>
+</Canvas>
+
+```jsx
+<Button>Primary Button</Button>
+
+<Button variant="outline">Outline Button</Button>
+
+<Button variant="ghost">Ghost Button</Button>
+```
+
+## Button Sizes
+
+The Button component supports different sizes: Small, Medium, and Large.
+
+<Canvas>
+  <Story name="Button Sizes">
+    <div className="flex flex-wrap gap-5 items-center">
+      <Button size="sm">Small Button</Button>
+      <Button>Medium Button</Button>
+      <Button size="lg">Large Button</Button>
+    </div>
+  </Story>
+</Canvas>
+
+```jsx
+<Button size="sm">Small Button</Button>
+
+<Button>Medium Button</Button>
+
+<Button size="lg">Large Button</Button>
+```
+
+## Button Variants
+
+Additional button variants include Destructive and Link.
+
+<Canvas>
+  <Story name="Button Variants">
+    <div className="flex flex-wrap items-center gap-5">
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="link">Link</Button>
+    </div>
+  </Story>
+</Canvas>
+
+```jsx
+<Button variant="destructive">Destructive</Button>
+<Button variant="link">Link</Button>
+```
+
+## Buttons with Icons
+
+Buttons can be enhanced with icons from the Icons library.
+
+<Canvas>
+  <Story name="Buttons with Icons">
+    <div className="flex flex-wrap items-center gap-5">
+      <Button>
+        <Icons.MailOpen size={16} />
+        Login with Email
+      </Button>
+
+      <Button>
+        Preview
+        <Icons.ArrowBigRight size={16} />
+      </Button>
+
+      <Button>
+        <Icons.Sun size={16} />
+      </Button>
+
+      <Button variant="outline">
+        <Icons.Moon size={16} />
+      </Button>
+
+    </div>
+
+  </Story>
+</Canvas>
+
+```jsx
+<Button>
+  <Icons.MailOpen size={16} /> Login with Email
+</Button>
+
+<Button>
+  Preview <Icons.ArrowBigRight size={16} />
+</Button>
+
+<Button>
+  <Icons.Sun size={16} />
+</Button>
+
+<Button variant="outline">
+  <Icons.Moon size={16} />
+</Button>
+```
+
+## Complex Buttons with Dividers
+
+Buttons can also include complex layouts with dividers.
+
+<Canvas>
+  <Story name="Complex Buttons with Dividers">
+    <div className="flex flex-wrap gap-5 items-center">
+      <Button className="py-0">
+        <Icons.ArrowBigLeft size={16} />
+        <span className="border-r h-full"></span>
+        <span>Preview</span>
+      </Button>
+
+      <Button className="py-0">
+        <span>Preview</span>
+        <span className="border-r h-full"></span>
+        <Icons.ArrowBigRight size={16} />
+      </Button>
+
+      <Button>
+        <Icons.ArrowBigLeft size={16} />
+        <span className="border-r h-full"></span>
+        <span>Preview</span>
+      </Button>
+
+      <Button>
+        <span>Preview</span>
+        <span className="border-r h-full"></span>
+        <Icons.ArrowBigRight size={16} />
+      </Button>
+    </div>
+
+  </Story>
+</Canvas>
+
+```jsx
+<Button className="py-0">
+  <Icons.ArrowBigLeft size={16} />
+  <span className="border-r h-full"></span>
+  <span>Preview</span>
+</Button>
+
+<Button className="py-0">
+  <span>Preview</span>
+  <span className="border-r h-full"></span>
+  <Icons.ArrowBigRight size={16} />
+</Button>
+
+<Button>
+  <Icons.ArrowBigLeft size={16} />
+  <span className="border-r h-full"></span>
+  <span>Preview</span>
+</Button>
+
+<Button>
+  <span>Preview</span>
+  <span className="border-r h-full"></span>
+  <Icons.ArrowBigRight size={16} />
+</Button>
+```
