@@ -1,0 +1,60 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Alert, AlertTitle, AlertDescription, Icons } from "ui";
+
+<Meta title="Example/Alert" component={Alert} />
+
+# Alert Component
+
+The `Alert` component is used to display important messages to the user. It supports different variants and can include icons and additional elements like titles and descriptions.
+
+## Default Alert
+
+A standard alert to notify the user about general information.
+
+<Canvas>
+  <Story name="Default Alert">
+    <Alert>
+      <Icons.Terminal className="h-4 w-4" />
+      <AlertTitle>Heads up!</AlertTitle>
+      <AlertDescription>
+        You can add components to your app using the CLI.
+      </AlertDescription>
+    </Alert>
+  </Story>
+</Canvas>
+
+```jsx
+<Alert>
+  <Icons.Terminal className="h-4 w-4" />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components to your app using the CLI.
+  </AlertDescription>
+</Alert>
+```
+
+## Alert Variants
+
+An alert to show error or destructive actions, such as session expiration.
+
+<Canvas>
+  <Story name="Destructive Alert">
+    <Alert variant="destructive">
+      <Icons.AlertCircle className="h-4 w-4" />
+      <AlertTitle>Error</AlertTitle>
+      <AlertDescription>
+        Your session has expired. Please log in again.
+      </AlertDescription>
+    </Alert>
+  </Story>
+</Canvas>
+
+````jsx
+<Alert variant="destructive">
+  <Icons.AlertCircle className="h-4 w-4" />
+  <AlertTitle>Error</AlertTitle>
+  <AlertDescription>
+    Your session has expired. Please log in again.
+  </AlertDescription>
+</Alert>
+````

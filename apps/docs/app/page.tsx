@@ -1,4 +1,4 @@
-import { Button, Icons } from "ui";
+import { Button, Alert, AlertDescription, AlertTitle, Icons } from "ui";
 
 export default function Page() {
   return (
@@ -150,6 +150,56 @@ export default function Page() {
               Please wait
             </Button>
           </div>
+        </div>
+      </div>
+
+      <div id="alert-section" className="flex flex-col gap-5">
+        <div>
+          <h1 className="text-lg font-semibold leading-10">Alert Component</h1>
+          <p className="leading-9 text-sm">
+            The `Alert` component is used to display important messages to the
+            user. It supports different variants and can include icons and
+            additional elements like titles and descriptions.
+          </p>
+        </div>
+
+        <div id="default-alert">
+          <div className="mb-3">
+            <h2 className="text-medium font-semibold leading-9">
+              Default Alert
+            </h2>
+            <hr />
+            <p className="leading-9 text-sm">
+              A standard alert to notify the user about general information.
+            </p>
+          </div>
+          <Alert>
+            <Icons.Terminal className="h-4 w-4" />
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              You can add components to your app using the cli.
+            </AlertDescription>
+          </Alert>
+        </div>
+
+        <div id="destructive-alert">
+          <div className="mb-3">
+            <h2 className="text-medium font-semibold leading-9">
+              Alert Variants{" "}
+            </h2>
+            <hr />
+            <p className="leading-9 text-sm">
+              An alert to show error or destructive actions, such as session
+              expiration.
+            </p>
+          </div>
+          <Alert variant="destructive">
+            <Icons.AlertCircle className="h-4 w-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>
+              Your session has expired. Please log in again.
+            </AlertDescription>
+          </Alert>
         </div>
       </div>
     </div>
