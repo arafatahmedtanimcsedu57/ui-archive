@@ -2,8 +2,8 @@ import { Button, Alert, AlertDescription, AlertTitle, Icons } from "ui";
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-6">
-      <div id="button-section" className="flex flex-col gap-5">
+    <div className="flex flex-col gap-10">
+      <div id="button-section" className="flex flex-col gap-4">
         <div>
           <h1 className="text-lg font-semibold leading-10">Button Component</h1>
           <p className="leading-9 text-sm">
@@ -153,7 +153,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div id="alert-section" className="flex flex-col gap-5">
+      <div id="alert-section" className="flex flex-col gap-4">
         <div>
           <h1 className="text-lg font-semibold leading-10">Alert Component</h1>
           <p className="leading-9 text-sm">
